@@ -41,13 +41,14 @@ function TatetiBody({ count, setCountTateti, onTatetiBodyClick }) {
 
   const winner = QuienGano(celdas, count);
 
+  const [w1, setW1] = useState(0);
+  const [w2, setW2] = useState(0);
+
   player1 = p1;
   player2 = p2;
 
-  const [w1, setW1] = useState(0);
-  const [w2, setW2] = useState(0);
   
-
+  
   function ControlarWins() {
     if (winner === player1) {
       setW1(w1 + 1);
@@ -134,7 +135,7 @@ function FormPlayers({ count,p1, p2, onFormPlayer1, onFormPlayer2, w1, w2 }) {
     <>
       <form>
         <div>
-          <label htmlFor="playOne">Player1 1: </label>
+          <label htmlFor="playOne">Player 1: </label>
           <input
             type="text"
             id="playOne"
